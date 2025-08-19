@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eungkôt - Ikan Segar</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1 id="typing-text">Eungkôt</h1>
+    <p>Ikan Segar Langsung dari Kolam</p>
+  </header>
+
+  <nav>
+    <a class="non-selectable" href="#beranda">Home</a>
+    <a class="non-selectable" href="#produk">Produk</a>
+    <a class="non-selectable" href="#tentang">Tentang</a>
+    <a class="non-selectable" href="#kontak">Kontak</a>
+  </nav>
+
+  <section id="beranda">
+    <h2 class="non-selectable">Fresh Fish Everyday with Eungkôt</h2>
+  </section>
+
+  <section id="produk">
+    <h2 class="non-selectable">Produk Kami</h2>
+    <div>
+      <h3 class="non-selectable">Ikan Nila</h3>
+      <p class="non-selectable">Rp 25.000/kg</p>
+      <a href="#pesan" onclick="konfirmasiPesan('Ikan Nila')">Pesan</a>
+    </div>
+    <div>
+      <h3 class="non-selectable">Ikan Patin</h3>
+      <p class="non-selectable">Rp 27.000/kg</p>
+      <a href="#pesan" onclick="konfirmasiPesan('Ikan Patin')">Pesan</a>
+    </div>
+    <div>
+      <h3 class="non-selectable">Ikan Mas</h3>
+      <p class="non-selectable">Rp 30.000/kg</p>
+      <a href="#pesan" onclick="konfirmasiPesan('Ikan Mas')">Pesan</a>
+    </div>
+  </section>
+
+  <section id="tentang">
+    <h2 class="non-selectable">Tentang Kami</h2>
+    <p class="non-selectable"> 
+      <b>Eungkôt</b> adalah usaha lokal yang menyediakan ikan segar berkualitas tinggi dari kolam budidaya air tawar di Aceh. Kami berkomitmen untuk menjaga kualitas dan kesegaran ikan dengan proses budidaya yang ramah lingkungan dan berkelanjutan. Setiap ikan yang kami jual dipastikan bebas dari bahan kimia berbahaya dan diproses secara higienis.</p>
+    <p>
+      <b>💡 Kenapa Memilih Eungkot?</b>
+    </p>
+    <p>
+      <li>Budidaya Ramah Lingkungan: Menggunakan metode budidaya yang minim dampak negatif terhadap lingkungan sekitar.</li>
+      <li>Kualitas Terjamin: Ikan dipelihara dengan pakan alami dan tanpa bahan kimia berbahaya.</li>
+      <li>Segar dan Higienis: Proses pemanenan dan pengemasan dilakukan dengan standar kebersihan yang tinggi.</li>
+      <li>Mendukung Ekonomi Lokal: Memberdayakan masyarakat sekitar melalui lapangan pekerjaan dan pelatihan budidaya ikan.</li>
+    </p>
+  </section>
+
+  <!-- Formulir Pemesanan -->
+<section id="pesan">
+    <h2 class="non-selectable">Formulir Pemesanan</h2>
+    <form id="formPemesanan">
+      <label class="non-selectable">Nama:</label>
+      <input type="text" name="nama" required>
+  
+      <label class="non-selectable">Produk:</label>
+      <select name="produk" id="produkSelect">
+        <option value="Ikan Nila">Ikan Nila</option>
+        <option value="Ikan Patin">Ikan Patin</option>
+        <option value="Ikan Mas">Ikan Mas</option>
+      </select>
+  
+      <label class="non-selectable">Jumlah (kg):</label>
+      <input type="number" name="jumlah" required>
+  
+      <label class="non-selectable">Alamat Pengiriman:</label>
+      <textarea name="alamat" required></textarea>
+  
+      <label class="non-selectable">Pesan untuk Penjual:</label>
+      <textarea name="pesan"></textarea>
+  
+      <input type="submit" value="Kirim">
+    </form>
+  </section>
+
+  <footer id="kontak">
+    <div>
+      <h2 class="non-selectable">Alamat</h2>
+      <p class="non-selectable">Jl. Petua Hamzah  PB.Teungoh Langsa barat</p>
+    </div>
+    <div>
+      <h2 class="non-selectable">Jam Operasional</h2>
+      <p class="non-selectable">Senin - Minggu: 07.00 - 18.00</p>
+    </div>
+    <div>
+      <h2 class="non-selectable">Contact</h2>
+      <p class="non-selectable">
+        <a href="https://www.instagram.com/eungkot_langsa/" target="_blank" style="color: white; text-decoration: none;">
+          <i class="fa fa-instagram" aria-hidden="true"></i>Eungkot_Langsa</a>
+      </p>
+      <p><i class="fa fa-whatsapp" aria-hidden="true"></i>+6281347828549</p>
+      <p><i class="fa fa-envelope-o" aria-hidden="true"></i>Eungkotlangsa@gmail.com</p>
+    </div>
+  </footer>
+  <div class="popup" id="popup">
+    <div class="popup-content">
+      <h2 class="non-selectable">Pastikan tidak ada yang salah sebelum melanjutkan.</h2>
+      <button onclick="lanjutkanWhatsApp()">Lanjut</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+
+</body>
+</html>

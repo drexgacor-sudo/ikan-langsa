@@ -1,0 +1,297 @@
+/* Global Styles */
+
+.fa {
+    margin-right: 8px;
+  }
+  
+  .non-selectable {
+      user-select: none; /* Untuk browser modern */
+      -webkit-user-select: none; /* Untuk Safari */
+      -moz-user-select: none; /* Untuk Firefox */
+      -ms-user-select: none; /* Untuk Internet Explorer/Edge */
+  }
+  
+  body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #e0f7fa, #ffffff);
+      scroll-behavior: smooth;
+    }
+    
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #00c6ff, #0072ff);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    header::after {
+      content: '';
+      background: url('https://www.transparenttextures.com/patterns/geometry2.png');
+      opacity: 0.1;
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+    }
+    
+    /* Navigation */
+    nav {
+      backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.3);
+      display: flex;
+      justify-content: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    nav a {
+      color: #0072ff;
+      padding: 16px 24px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+    nav a:hover,
+    nav a:focus {
+      color: #00c6ff;
+      transform: scale(1.05);
+    }
+    
+    /* Section */
+    section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    
+    /* Produk Section */
+    #produk {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+    #produk h2 {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 36px;
+      font-weight: 700;
+      color: #0072ff;
+    }
+    #produk div {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      padding: 24px;
+      width: 280px;
+      text-align: center;
+      transition: all 0.4s ease;
+    }
+    #produk div:hover {
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    }
+    #produk h3 {
+      margin-top: 0;
+      font-size: 24px;
+      color: #005f99;
+    }
+    #produk p {
+      color: #555;
+      font-size: 18px;
+    }
+    #produk a {
+      margin-top: 12px;
+      background: linear-gradient(90deg, #00c6ff, #0072ff);
+      color: white;
+      padding: 12px 24px;
+      border-radius: 30px;
+      text-decoration: none;
+      display: inline-block;
+      font-weight: 600;
+      transition: background 0.3s, transform 0.3s;
+    }
+    #produk a:hover {
+      background: #005f99;
+      transform: scale(1.05);
+    }
+    
+    /* Form */
+    form {
+      background: white;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+    }
+    form label {
+      font-weight: 600;
+      color: #0072ff;
+    }
+    form input,
+    form select,
+    form textarea {
+      width: 100%;
+      padding: 14px;
+      margin-top: 8px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+    }
+    form input[type="submit"] {
+      background: linear-gradient(90deg, #00c6ff, #0072ff);
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+    form input[type="submit"]:hover {
+      background: #005f99;
+    }
+    
+    /* Footer */
+    footer {
+      background: linear-gradient(135deg, #0072ff, #00c6ff);
+      color: white;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 50px 20px;
+      text-align: center;
+    }
+    footer h2 {
+      margin-top: 0;
+      font-size: 22px;
+    }
+    footer p {
+      margin: 8px 0;
+    }
+    
+    /* Popup */
+    .popup {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 2000;
+      display: none;
+    }
+    .popup-content {
+      background: white;
+      padding: 30px;
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      animation: popupShow 0.3s ease forwards;
+    }
+    .popup-content h2 {
+      margin-bottom: 20px;
+      font-size: 24px;
+      color: #0072ff;
+    }
+    .popup-content button {
+      background: #0072ff;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+    .popup-content button:hover {
+      background: #005f99;
+    }
+    
+    /* Popup Animation */
+    @keyframes popupShow {
+      from {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+        
+    }
+  
+    #typing-text {
+      font-size: 48px;
+      font-weight: 700;
+      white-space: nowrap; /* Biar teks tetap satu baris */
+      overflow: hidden; /* Sembunyikan teks yang belum muncul */
+      border-right: 2px solid #ffffff; /* Simulasi kursor */
+      width: 7ch; /* Sesuaikan dengan panjang teks Eungkôt (8 huruf + spasi) */
+      animation: typing 3s steps(8) infinite alternate, blink 0.5s step-end infinite;
+      margin: 0 auto; /* Tengah */
+    }
+    
+    /* Animasi mengetik */
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 10ch; }
+    }
+    
+    /* Animasi kursor kedip */
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+  
+    /* responsive */
+  
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+      }
+      nav a {
+        padding: 12px;
+        text-align: center;
+      }
+  
+      header {
+        padding: 60px 10px;
+      }
+  
+      section {
+        padding: 40px 10px;
+      }
+  
+      #produk {
+        flex-direction: column;
+        align-items: center;
+      }
+  
+      #produk div {
+        width: 90%;
+      }
+  
+      form {
+        padding: 20px;
+      }
+  
+      .popup-content {
+        width: 90%;
+        padding: 20px;
+      }
+  
+      #typing-text {
+        font-size: 32px;
+      }
+  
+      footer {
+        grid-template-columns: 1fr;
+        text-align: left;
+        padding: 30px 10px;
+      }
+    }
+   
+  
+    
+  
